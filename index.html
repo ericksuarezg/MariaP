@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="./css/libs/bootstrap-5.1.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/libs/bootstrap-social-gh-pages/bootstrap-social.css">
+    <title>Maria Paula edicion </title>
+</head>
+
+<body class="bg-dark text-white">
+    <div class="container-fluid sticky-top" style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 200%;">
+        <div class="row">
+            <div class="col-12 p-0">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand text-white" href="#" style="font-size:100%;">MENU</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="#">INFO</a>
+                                </li>
+                                <li class="nav-item dropdown text-white">
+                                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              TRABAJOS
+                            </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a id="fotografias" class="dropdown-item" href="#">Fotografia</a></li>
+                                        <li><a class="dropdown-item " href="#">Video</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item " href="#">Something else here</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+                                </li>
+                            </ul>
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class=" col-12 mt-5 text-center ">
+                <strong style="font-size: 4rem;">
+                    MARIA PAULA SUAREZ
+                </strong>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="slider" class="col-12 col-md-8 text  ">
+    </div>
+
+    <div id="footer" class="mt-5 fixed-bottom " style="background-color:transparent;">
+        <div class="row">
+            <div class="col-12 text-center text-white ">
+                <div>
+                    <a class="btn btn-social-icon  btn-twitter ">
+                        <span class="fa fa-twitter"> </span>
+                    </a>
+                    <a class="btn  btn-social-icon  btn-facebook ">
+                        <span class="fa fa-facebook"></span>
+                    </a>
+                    <a class="btn  btn-social-icon  btn-instagram ">
+                        <span class="fa fa-instagram"></span>
+                    </a>
+                    <a class="btn  btn-social-icon  btn-google ">
+                        <span class="fa fa-google"></span>
+                    </a>
+                    <a class="btn  btn-social-icon  btn-pinterest ">
+                        <span class="fa fa-pinterest"></span>
+                    </a>
+                </div>
+                <strong>
+                    2021 by Maria Paula Suarez 
+                </strong>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="./js/libs/jquery.min.js"></script>
+    <script src="./css/libs/bootstrap-5.1.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(() => {
+                $('#fotografias').click(() => {
+                    $.get("fotografia/sliderGeneral.html", (data) => {
+                        $("#slider").html(data);
+                    });
+
+                });
+
+            }
+
+
+        );
+    </script>
+</body>
+
+</html>
